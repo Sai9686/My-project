@@ -1,0 +1,15 @@
+SELECT 
+	o.order_id,
+    o.order_date,
+    o.status,
+    o.shipped_date,
+    c.customer_id,
+	c.first_name,
+    c.last_name,
+    c.phone,
+    c.address,
+    c.city,
+    c.state
+FROM customers c
+JOIN orders o
+ON o.customer_id = c.customer_id
